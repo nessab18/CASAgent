@@ -28,350 +28,159 @@
       --radius-lg: 12px;
     }
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background: var(--bg-secondary);
-      color: var(--text);
-      font-size: 14px;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-secondary); color: var(--text); font-size: 14px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 
     /* ── Header ── */
-    .ca-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 24px;
-      background: var(--bg);
-      border-bottom: 0.5px solid var(--border);
-      flex-shrink: 0;
-    }
-    .ca-logo {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      color: var(--casa-blue);
-    }
+    .ca-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; background: var(--bg); border-bottom: 0.5px solid var(--border); flex-shrink: 0; }
+    .ca-logo { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; color: var(--casa-blue); }
     .ca-logo span { color: var(--casa-peach); }
     .ca-header-right { display: flex; align-items: center; gap: 12px; }
-    .ca-badge {
-      font-size: 11px;
-      font-weight: 600;
-      background: var(--casa-blue-light);
-      color: var(--casa-blue-dark);
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
-    .ca-header-note {
-      font-size: 11px;
-      color: var(--text-tertiary);
-    }
+    .ca-badge { font-size: 11px; font-weight: 600; background: var(--casa-blue-light); color: var(--casa-blue-dark); padding: 3px 10px; border-radius: 20px; }
+    .ca-header-note { font-size: 11px; color: var(--text-tertiary); }
 
     /* ── API Bar ── */
-    .ca-api-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 24px;
-      background: var(--bg-secondary);
-      border-bottom: 0.5px solid var(--border);
-      flex-shrink: 0;
-    }
+    .ca-api-bar { display: flex; align-items: center; gap: 10px; padding: 8px 24px; background: var(--bg-secondary); border-bottom: 0.5px solid var(--border); flex-shrink: 0; }
     .ca-api-label { font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
-    .ca-api-bar input {
-      flex: 1;
-      max-width: 420px;
-      font-size: 12px;
-      padding: 5px 10px;
-      border: 0.5px solid var(--border-md);
-      border-radius: 6px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: monospace;
-      outline: none;
-    }
+    .ca-api-bar input { flex: 1; max-width: 420px; font-size: 12px; padding: 5px 10px; border: 0.5px solid var(--border-md); border-radius: 6px; background: var(--bg); color: var(--text); font-family: monospace; outline: none; }
     .ca-api-bar input:focus { border-color: var(--casa-blue); }
     .ca-api-status { font-size: 11px; color: var(--casa-blue); font-weight: 500; }
 
     /* ── Body ── */
-    .ca-body {
-      display: flex;
-      flex: 1;
-      min-height: 0;
-      overflow: hidden;
-    }
+    .ca-body { display: flex; flex: 1; min-height: 0; overflow: hidden; }
 
     /* ── Sidebar ── */
-    .ca-sidebar {
-      width: 240px;
-      min-width: 240px;
-      border-right: 0.5px solid var(--border);
-      background: var(--bg-secondary);
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-    }
-    .ca-sidebar-title {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 16px 16px 6px;
-    }
-    .ca-child-card {
-      padding: 10px 14px;
-      cursor: pointer;
-      border-left: 3px solid transparent;
-      transition: background 0.15s;
-    }
+    .ca-sidebar { width: 240px; min-width: 240px; border-right: 0.5px solid var(--border); background: var(--bg-secondary); display: flex; flex-direction: column; overflow-y: auto; }
+    .ca-sidebar-title { font-size: 10px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; padding: 16px 16px 6px; }
+    .ca-sidebar-search { padding: 6px 14px 10px; }
+    .ca-sidebar-search input { width: 100%; padding: 6px 10px; font-size: 12px; border: 0.5px solid var(--border-md); border-radius: 6px; background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; outline: none; }
+    .ca-sidebar-search input:focus { border-color: var(--casa-blue); }
+    .ca-child-card { padding: 10px 14px; cursor: pointer; border-left: 3px solid transparent; transition: background 0.15s; }
     .ca-child-card:hover { background: var(--bg); }
     .ca-child-card.active { background: var(--bg); border-left-color: var(--casa-peach); }
     .ca-child-row { display: flex; align-items: center; gap: 10px; }
     .ca-child-info { min-width: 0; }
     .ca-child-name { font-size: 13px; font-weight: 600; color: var(--text); }
     .ca-child-meta { font-size: 11px; color: var(--text-secondary); margin-top: 1px; }
-    .ca-child-tag {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 600;
-      background: var(--casa-peach-mid);
-      color: var(--casa-peach-dark);
-      padding: 1px 7px;
-      border-radius: 10px;
-      margin-top: 4px;
-    }
-    .ca-add-btn {
-      margin: 10px 14px;
-      padding: 8px 0;
-      border: 0.5px dashed var(--border-md);
-      border-radius: var(--radius);
-      background: none;
-      color: var(--text-secondary);
-      font-size: 12px;
-      cursor: pointer;
-      width: calc(100% - 28px);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      transition: all 0.15s;
-    }
+    .ca-child-tag { display: inline-block; font-size: 10px; font-weight: 600; background: var(--casa-peach-mid); color: var(--casa-peach-dark); padding: 1px 7px; border-radius: 10px; margin-top: 4px; }
+    .ca-add-btn { margin: 10px 14px; padding: 8px 0; border: 0.5px dashed var(--border-md); border-radius: var(--radius); background: none; color: var(--text-secondary); font-size: 12px; cursor: pointer; width: calc(100% - 28px); font-family: 'Plus Jakarta Sans', sans-serif; transition: all 0.15s; }
     .ca-add-btn:hover { background: var(--bg); color: var(--text); }
 
     /* ── Main ── */
-    .ca-main { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+    .ca-main { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; position: relative; }
     .ca-view { flex: 1; overflow-y: auto; }
 
     /* ── Profile ── */
-    .ca-profile-header {
-      padding: 20px 28px 0;
-      border-bottom: 0.5px solid var(--border);
-      background: var(--bg);
-    }
+    .ca-profile-header { padding: 20px 28px 0; border-bottom: 0.5px solid var(--border); background: var(--bg); }
     .ca-profile-top { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
-    .ca-avatar-circle {
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: var(--casa-blue-light);
-      border: 1.5px solid var(--casa-blue-mid);
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .ca-avatar-sm {
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      background: var(--casa-blue-light);
-      border: 1px solid var(--casa-blue-mid);
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
+    .ca-avatar-circle { width: 52px; height: 52px; border-radius: 50%; background: var(--casa-blue-light); border: 1.5px solid var(--casa-blue-mid); flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .ca-avatar-sm { width: 34px; height: 34px; border-radius: 50%; background: var(--casa-blue-light); border: 1px solid var(--casa-blue-mid); flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .ca-profile-name { font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.15; }
     .ca-profile-sub { font-size: 12px; color: var(--text-secondary); margin-top: 3px; }
-    .ca-profile-back {
-      font-size: 12px;
-      color: var(--casa-blue);
-      cursor: pointer;
-      margin-bottom: 10px;
-      display: inline-block;
-      font-weight: 500;
-    }
+    .ca-profile-back { font-size: 12px; color: var(--casa-blue); cursor: pointer; margin-bottom: 10px; display: inline-block; font-weight: 500; }
     .ca-profile-back:hover { text-decoration: underline; }
-
-    /* ── Tabs ── */
     .ca-tabs { display: flex; }
-    .ca-tab {
-      padding: 8px 18px;
-      font-size: 13px;
-      color: var(--text-secondary);
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: all 0.15s;
-      white-space: nowrap;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+    .ca-tab { padding: 8px 18px; font-size: 13px; color: var(--text-secondary); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; white-space: nowrap; font-family: 'Plus Jakarta Sans', sans-serif; }
     .ca-tab:hover { color: var(--text); }
     .ca-tab.active { color: var(--casa-blue-dark); border-bottom-color: var(--casa-blue); font-weight: 600; }
-
-    /* ── Panel ── */
     .ca-panel { padding: 22px 28px; }
-
     .ca-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
     .ca-info-card { background: var(--bg-secondary); border-radius: var(--radius); padding: 12px 14px; border: 0.5px solid var(--border); }
     .ca-info-card-label { font-size: 10px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 4px; }
     .ca-info-card-val { font-size: 13px; color: var(--text); line-height: 1.5; }
-
     .ca-section-head { font-size: 13px; font-weight: 700; color: var(--text); margin: 0 0 10px; }
-
-    .ca-history-entry {
-      padding: 10px 14px;
-      border-left: 3px solid var(--casa-blue-mid);
-      margin-bottom: 8px;
-      background: var(--bg-secondary);
-      border-radius: 0 var(--radius) var(--radius) 0;
-    }
+    .ca-history-entry { padding: 10px 14px; border-left: 3px solid var(--casa-blue-mid); margin-bottom: 8px; background: var(--bg-secondary); border-radius: 0 var(--radius) var(--radius) 0; }
     .ca-history-date { font-size: 11px; color: var(--text-tertiary); margin-bottom: 2px; font-weight: 600; }
     .ca-history-text { font-size: 13px; color: var(--text); line-height: 1.55; }
-
-    .ca-flag {
-      display: flex; align-items: flex-start; gap: 9px;
-      padding: 10px 14px;
-      background: var(--casa-peach-light);
-      border: 0.5px solid var(--casa-peach-mid);
-      border-radius: var(--radius);
-      margin-bottom: 8px;
-    }
+    .ca-flag { display: flex; align-items: flex-start; gap: 9px; padding: 10px 14px; background: var(--casa-peach-light); border: 0.5px solid var(--casa-peach-mid); border-radius: var(--radius); margin-bottom: 8px; }
     .ca-flag-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--casa-peach); flex-shrink: 0; margin-top: 5px; }
     .ca-flag-text { font-size: 13px; color: var(--text); line-height: 1.5; }
-
-    .ca-case-list-item {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 14px;
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      margin-bottom: 8px;
-      cursor: pointer;
-      border: 0.5px solid var(--border);
-      transition: border-color 0.15s;
-    }
+    .ca-case-list-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: var(--bg-secondary); border-radius: var(--radius); margin-bottom: 8px; cursor: pointer; border: 0.5px solid var(--border); transition: border-color 0.15s; }
     .ca-case-list-item:hover { border-color: var(--casa-blue); }
     .ca-case-list-num { font-size: 13px; font-weight: 600; color: var(--text); }
     .ca-case-list-meta { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
     .ca-case-open-btn { font-size: 12px; color: var(--casa-blue); font-weight: 600; white-space: nowrap; }
 
     /* ── Case workspace ── */
-    .ca-case-header {
-      padding: 16px 28px 0;
-      border-bottom: 0.5px solid var(--border);
-      background: var(--bg);
-    }
+    .ca-case-header { padding: 16px 28px 0; border-bottom: 0.5px solid var(--border); background: var(--bg); }
     .ca-case-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
     .ca-case-sub { font-size: 12px; color: var(--text-secondary); margin-bottom: 10px; }
-
-    .ca-module-desc {
-      font-size: 13px;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-      padding: 12px 16px;
-      background: var(--casa-blue-light);
-      border-radius: var(--radius);
-      border-left: 3px solid var(--casa-blue);
-      line-height: 1.65;
-    }
+    .ca-module-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 16px; padding: 12px 16px; background: var(--casa-blue-light); border-radius: var(--radius); border-left: 3px solid var(--casa-blue); line-height: 1.65; }
     .ca-form-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px; display: block; }
     .ca-form-row { margin-bottom: 14px; }
-    .ca-form-row textarea {
-      width: 100%; min-height: 110px;
-      padding: 10px 12px;
-      font-size: 13px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      border: 0.5px solid var(--border-md);
-      border-radius: var(--radius);
-      resize: vertical;
-      background: var(--bg);
-      color: var(--text);
-      outline: none;
-      line-height: 1.6;
-    }
+    .ca-form-row textarea { width: 100%; min-height: 110px; padding: 10px 12px; font-size: 13px; font-family: 'Plus Jakarta Sans', sans-serif; border: 0.5px solid var(--border-md); border-radius: var(--radius); resize: vertical; background: var(--bg); color: var(--text); outline: none; line-height: 1.6; }
     .ca-form-row textarea:focus { border-color: var(--casa-blue); }
-
-    .ca-run-btn {
-      padding: 9px 24px;
-      background: var(--casa-blue);
-      color: #EBF4FF;
-      border: none;
-      border-radius: var(--radius);
-      font-size: 13px;
-      font-weight: 600;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
+    .ca-run-btn { padding: 9px 24px; background: var(--casa-blue); color: #EBF4FF; border: none; border-radius: var(--radius); font-size: 13px; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif; cursor: pointer; transition: background 0.15s; }
     .ca-run-btn:hover { background: var(--casa-blue-dark); }
     .ca-run-btn:disabled { background: var(--bg-secondary); color: var(--text-tertiary); cursor: not-allowed; }
-
-    .ca-output {
-      margin-top: 18px;
-      padding: 16px 18px;
-      background: var(--bg-secondary);
-      border-radius: var(--radius);
-      border: 0.5px solid var(--border);
-      font-size: 13px;
-      line-height: 1.75;
-      color: var(--text);
-      white-space: pre-wrap;
-    }
-    .ca-output-label {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 10px;
-      display: block;
-    }
+    .ca-output { margin-top: 18px; padding: 16px 18px; background: var(--bg-secondary); border-radius: var(--radius); border: 0.5px solid var(--border); font-size: 13px; line-height: 1.75; color: var(--text); white-space: pre-wrap; }
+    .ca-output-label { font-size: 10px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; display: block; }
     .ca-disclaimer { font-size: 11px; color: var(--text-tertiary); margin-top: 10px; line-height: 1.55; }
 
+    /* ── Org link chips ── */
+    .org-link { display: inline-block; color: var(--casa-blue); font-weight: 600; cursor: pointer; border-bottom: 1px dotted var(--casa-blue); }
+    .org-link:hover { color: var(--casa-blue-dark); }
+
+    /* ── Org card overlay ── */
+    .org-card-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; z-index: 200; }
+    .org-card { background: var(--bg); border-radius: var(--radius-lg); padding: 24px; width: 360px; border: 0.5px solid var(--border-md); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+    .org-card-name { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .org-card-type { font-size: 11px; font-weight: 600; background: var(--casa-blue-light); color: var(--casa-blue-dark); padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 14px; }
+    .org-card-row { display: flex; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
+    .org-card-row:last-of-type { border-bottom: none; }
+    .org-card-row-label { width: 80px; flex-shrink: 0; color: var(--text-tertiary); font-size: 12px; }
+    .org-card-row-val { color: var(--text); flex: 1; line-height: 1.5; }
+    .org-card-link { color: var(--casa-blue); text-decoration: none; font-weight: 500; }
+    .org-card-link:hover { text-decoration: underline; }
+    .org-card-close { margin-top: 16px; width: 100%; padding: 8px; background: var(--bg-secondary); border: 0.5px solid var(--border-md); border-radius: var(--radius); font-size: 13px; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-secondary); }
+
+    /* ── Transcript section ── */
+    .ca-transcript-entry { background: var(--bg-secondary); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 14px 16px; margin-bottom: 10px; }
+    .ca-transcript-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .ca-transcript-title { font-size: 13px; font-weight: 600; color: var(--text); }
+    .ca-transcript-date { font-size: 11px; color: var(--text-tertiary); }
+    .ca-transcript-vol { font-size: 11px; color: var(--text-secondary); margin-bottom: 8px; }
+    .ca-transcript-text { font-size: 13px; color: var(--text); line-height: 1.6; white-space: pre-wrap; max-height: 120px; overflow-y: auto; border-top: 0.5px solid var(--border); padding-top: 8px; margin-top: 4px; }
+    .ca-transcript-btn { font-size: 11px; color: var(--casa-blue); cursor: pointer; font-weight: 600; background: none; border: none; font-family: 'Plus Jakarta Sans', sans-serif; padding: 0; }
+    .ca-transcript-btn:hover { text-decoration: underline; }
+
+    /* ── Chat panel ── */
+    .ca-chat-fab { position: fixed; bottom: 28px; right: 28px; width: 52px; height: 52px; border-radius: 50%; background: var(--casa-blue); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(43,108,176,0.35); z-index: 150; transition: background 0.15s, transform 0.15s; }
+    .ca-chat-fab:hover { background: var(--casa-blue-dark); transform: scale(1.05); }
+    .ca-chat-panel { position: fixed; bottom: 92px; right: 28px; width: 360px; height: 500px; background: var(--bg); border-radius: var(--radius-lg); border: 0.5px solid var(--border-md); box-shadow: 0 8px 32px rgba(0,0,0,0.14); display: flex; flex-direction: column; z-index: 150; overflow: hidden; }
+    .ca-chat-panel.hidden { display: none; }
+    .ca-chat-header { padding: 14px 16px; border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; background: var(--bg); }
+    .ca-chat-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .ca-chat-subtitle { font-size: 11px; color: var(--text-secondary); margin-top: 1px; }
+    .ca-chat-close { background: none; border: none; cursor: pointer; font-size: 18px; color: var(--text-tertiary); line-height: 1; padding: 0; }
+    .ca-chat-messages { flex: 1; overflow-y: auto; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+    .ca-chat-msg { max-width: 85%; padding: 9px 12px; border-radius: 12px; font-size: 13px; line-height: 1.55; }
+    .ca-chat-msg.user { background: var(--casa-blue); color: #EBF4FF; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .ca-chat-msg.agent { background: var(--bg-secondary); color: var(--text); align-self: flex-start; border-bottom-left-radius: 4px; border: 0.5px solid var(--border); }
+    .ca-chat-msg.thinking { color: var(--text-tertiary); font-style: italic; }
+    .ca-chat-input-row { padding: 10px 12px; border-top: 0.5px solid var(--border); display: flex; gap: 8px; align-items: flex-end; background: var(--bg); }
+    .ca-chat-input-row textarea { flex: 1; padding: 8px 10px; font-size: 13px; font-family: 'Plus Jakarta Sans', sans-serif; border: 0.5px solid var(--border-md); border-radius: var(--radius); resize: none; outline: none; line-height: 1.5; max-height: 80px; min-height: 36px; color: var(--text); background: var(--bg); }
+    .ca-chat-input-row textarea:focus { border-color: var(--casa-blue); }
+    .ca-chat-send { width: 36px; height: 36px; border-radius: var(--radius); background: var(--casa-blue); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.15s; }
+    .ca-chat-send:hover { background: var(--casa-blue-dark); }
+    .ca-chat-send:disabled { background: var(--bg-secondary); cursor: not-allowed; }
+    .ca-mic-btn { width: 36px; height: 36px; border-radius: var(--radius); border: 0.5px solid var(--border-md); background: var(--bg); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.15s; }
+    .ca-mic-btn:hover { background: var(--bg-secondary); }
+    .ca-mic-btn.recording { background: #fee2e2; border-color: #fca5a5; }
+    .ca-chat-context { font-size: 11px; color: var(--text-tertiary); padding: 6px 16px; background: var(--bg-secondary); border-bottom: 0.5px solid var(--border); }
+
     /* ── Modal ── */
-    .ca-modal-bg {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,0.3);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 100;
-    }
-    .ca-modal {
-      background: var(--bg);
-      border-radius: var(--radius-lg);
-      padding: 26px;
-      width: 320px;
-      border: 0.5px solid var(--border-md);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    }
+    .ca-modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 100; }
+    .ca-modal { background: var(--bg); border-radius: var(--radius-lg); padding: 26px; width: 340px; border: 0.5px solid var(--border-md); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
     .ca-modal-title { font-size: 17px; font-weight: 700; margin-bottom: 3px; color: var(--text); }
     .ca-modal-sub { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5; }
     .ca-modal-row { margin-bottom: 11px; }
     .ca-modal-row label { font-size: 12px; font-weight: 500; color: var(--text-secondary); display: block; margin-bottom: 4px; }
-    .ca-modal-row input {
-      width: 100%; padding: 7px 10px; font-size: 13px;
-      border: 0.5px solid var(--border-md); border-radius: 6px;
-      background: var(--bg); color: var(--text);
-      font-family: 'Plus Jakarta Sans', sans-serif; outline: none;
-    }
-    .ca-modal-row input:focus { border-color: var(--casa-blue); }
+    .ca-modal-row input, .ca-modal-row textarea, .ca-modal-row select { width: 100%; padding: 7px 10px; font-size: 13px; border: 0.5px solid var(--border-md); border-radius: 6px; background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; outline: none; }
+    .ca-modal-row textarea { min-height: 80px; resize: vertical; }
+    .ca-modal-row input:focus, .ca-modal-row textarea:focus { border-color: var(--casa-blue); }
     .ca-modal-btns { display: flex; gap: 8px; margin-top: 16px; }
-    .ca-modal-cancel {
-      flex: 1; padding: 8px; background: none;
-      border: 0.5px solid var(--border-md); border-radius: 6px;
-      font-size: 13px; cursor: pointer; color: var(--text-secondary);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .ca-modal-create {
-      flex: 2; padding: 8px; background: var(--casa-blue); border: none;
-      border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;
-      color: #EBF4FF; font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
+    .ca-modal-cancel { flex: 1; padding: 8px; background: none; border: 0.5px solid var(--border-md); border-radius: 6px; font-size: 13px; cursor: pointer; color: var(--text-secondary); font-family: 'Plus Jakarta Sans', sans-serif; }
+    .ca-modal-create { flex: 2; padding: 8px; background: var(--casa-blue); border: none; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; color: #EBF4FF; font-family: 'Plus Jakarta Sans', sans-serif; }
     .ca-empty { font-size: 13px; color: var(--text-tertiary); padding: 8px 0; }
   </style>
 </head>
@@ -394,6 +203,9 @@
   <div class="ca-body">
     <div class="ca-sidebar">
       <div class="ca-sidebar-title">Children</div>
+      <div class="ca-sidebar-search">
+        <input type="text" id="childSearch" placeholder="Search by name or case #..." oninput="filterChildren()" />
+      </div>
       <div id="childList"></div>
       <button class="ca-add-btn" onclick="showModal()">+ Add child profile</button>
     </div>
@@ -402,27 +214,252 @@
     </div>
   </div>
 
+  <!-- Floating chat button -->
+  <button class="ca-chat-fab" onclick="toggleChat()" id="chatFab" title="Ask CASAgent">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EBF4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+
+  <!-- Chat panel -->
+  <div class="ca-chat-panel hidden" id="chatPanel">
+    <div class="ca-chat-header">
+      <div>
+        <div class="ca-chat-title">CASAgent Assistant</div>
+        <div class="ca-chat-subtitle" id="chatSubtitle">Ask anything about this case</div>
+      </div>
+      <button class="ca-chat-close" onclick="toggleChat()">×</button>
+    </div>
+    <div class="ca-chat-context" id="chatContext">No case selected — answers will be general</div>
+    <div class="ca-chat-messages" id="chatMessages">
+      <div class="ca-chat-msg agent">Hi! I'm CASAgent. You can type or use the microphone to ask me anything — about this case, court prep, child development, or local resources. How can I help?</div>
+    </div>
+    <div class="ca-chat-input-row">
+      <button class="ca-mic-btn" id="micBtn" onclick="toggleMic()" title="Voice input">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+      </button>
+      <textarea id="chatInput" placeholder="Type a question or press the mic..." rows="1" onkeydown="chatKeydown(event)" oninput="autoResize(this)"></textarea>
+      <button class="ca-chat-send" id="chatSendBtn" onclick="sendChat()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EBF4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <script>
-    function personSVG(large) {
-      const s = large ? 52 : 34;
-      return `<svg width="${s}" height="${s}" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="26" cy="18" r="9" fill="#2B6CB0" opacity="0.55"/>
-        <ellipse cx="26" cy="40" rx="14" ry="9" fill="#2B6CB0" opacity="0.4"/>
-      </svg>`;
+    /* ── Org directory ── */
+    const orgDirectory = {
+      'James City County Child Protective Services': { type: 'Child Protective Services', address: '5249 Olde Towne Rd, Williamsburg, VA 23188', phone: '(757) 259-3100', hours: 'Mon–Fri 8am–5pm', email: 'jccss@jamescitycountyva.gov', website: 'https://www.jamescitycountyva.gov/365/Social-Services' },
+      'James City County CPS': { type: 'Child Protective Services', address: '5249 Olde Towne Rd, Williamsburg, VA 23188', phone: '(757) 259-3100', hours: 'Mon–Fri 8am–5pm', email: 'jccss@jamescitycountyva.gov', website: 'https://www.jamescitycountyva.gov/365/Social-Services' },
+      'Williamsburg-James City County Schools': { type: 'School District', address: '221 Ironbound Rd, Williamsburg, VA 23188', phone: '(757) 253-6700', hours: 'Mon–Fri 7:30am–4:30pm', email: 'info@wjcc.k12.va.us', website: 'https://www.wjcc.k12.va.us' },
+      'WJCC Schools': { type: 'School District', address: '221 Ironbound Rd, Williamsburg, VA 23188', phone: '(757) 253-6700', hours: 'Mon–Fri 7:30am–4:30pm', email: 'info@wjcc.k12.va.us', website: 'https://www.wjcc.k12.va.us' },
+      'Peninsula Agency on Aging': { type: 'Social Services', address: '739 Thimble Shoals Blvd, Newport News, VA 23606', phone: '(757) 873-0541', hours: 'Mon–Fri 8am–5pm', email: 'info@peninsulaagingva.org', website: 'https://www.peninsulaagingva.org' },
+      'Avalon Center': { type: 'Domestic Violence Services', address: 'Williamsburg, VA (confidential)', phone: '(757) 258-5051', hours: '24/7 crisis line available', email: 'info@avaloncenter.org', website: 'https://www.avaloncenter.org' },
+      'Colonial Behavioral Health': { type: 'Mental Health Services', address: '120 Kings Way, Williamsburg, VA 23185', phone: '(757) 220-3200', hours: 'Mon–Fri 8am–5pm, crisis line 24/7', email: 'info@cbhva.org', website: 'https://www.cbhva.org' },
+      'Virginia Department of Social Services': { type: 'State Agency', address: '801 E. Main St, Richmond, VA 23219', phone: '(804) 726-7000', hours: 'Mon–Fri 8am–5pm', email: 'info@dss.virginia.gov', website: 'https://www.dss.virginia.gov' },
+      'VDSS': { type: 'State Agency', address: '801 E. Main St, Richmond, VA 23219', phone: '(804) 726-7000', hours: 'Mon–Fri 8am–5pm', email: 'info@dss.virginia.gov', website: 'https://www.dss.virginia.gov' },
+    };
+
+    function linkifyOrgs(text) {
+      let result = text;
+      Object.keys(orgDirectory).forEach(orgName => {
+        const escaped = orgName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`\\b(${escaped})\\b`, 'g');
+        result = result.replace(regex, `<span class="org-link" onclick="showOrgCard('${orgName.replace(/'/g,"\\'")}')">$1</span>`);
+      });
+      return result;
     }
 
+    function showOrgCard(orgName) {
+      const org = orgDirectory[orgName];
+      if (!org) return;
+      const existing = document.getElementById('orgCardOverlay');
+      if (existing) existing.remove();
+      const overlay = document.createElement('div');
+      overlay.className = 'org-card-overlay';
+      overlay.id = 'orgCardOverlay';
+      overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+      overlay.innerHTML = `
+        <div class="org-card">
+          <div class="org-card-name">${orgName}</div>
+          <div class="org-card-type">${org.type}</div>
+          <div class="org-card-row"><div class="org-card-row-label">Address</div><div class="org-card-row-val">${org.address}</div></div>
+          <div class="org-card-row"><div class="org-card-row-label">Phone</div><div class="org-card-row-val"><a class="org-card-link" href="tel:${org.phone}">${org.phone}</a></div></div>
+          <div class="org-card-row"><div class="org-card-row-label">Hours</div><div class="org-card-row-val">${org.hours}</div></div>
+          <div class="org-card-row"><div class="org-card-row-label">Email</div><div class="org-card-row-val"><a class="org-card-link" href="mailto:${org.email}">${org.email}</a></div></div>
+          <div class="org-card-row"><div class="org-card-row-label">Website</div><div class="org-card-row-val"><a class="org-card-link" href="${org.website}" target="_blank">Visit website →</a></div></div>
+          <button class="org-card-close" onclick="document.getElementById('orgCardOverlay').remove()">Close</button>
+        </div>`;
+      document.body.appendChild(overlay);
+    }
+
+    /* ── Speech recognition ── */
+    let recognition = null;
+    let isRecording = false;
+
+    function initSpeech() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) return null;
+      const r = new SpeechRecognition();
+      r.continuous = false;
+      r.interimResults = false;
+      r.lang = 'en-US';
+      r.onresult = (e) => {
+        const transcript = e.results[0][0].transcript;
+        document.getElementById('chatInput').value = transcript;
+        stopMic();
+        sendChat();
+      };
+      r.onerror = () => stopMic();
+      r.onend = () => stopMic();
+      return r;
+    }
+
+    function toggleMic() {
+      if (isRecording) { stopMic(); return; }
+      if (!recognition) recognition = initSpeech();
+      if (!recognition) { alert('Voice input is not supported in this browser. Try Chrome.'); return; }
+      isRecording = true;
+      document.getElementById('micBtn').classList.add('recording');
+      document.getElementById('chatInput').placeholder = 'Listening...';
+      recognition.start();
+    }
+
+    function stopMic() {
+      isRecording = false;
+      const btn = document.getElementById('micBtn');
+      if (btn) btn.classList.remove('recording');
+      const inp = document.getElementById('chatInput');
+      if (inp) inp.placeholder = 'Type a question or press the mic...';
+      if (recognition) try { recognition.stop(); } catch(e) {}
+    }
+
+    /* ── Chat ── */
+    let chatHistory = [];
+    let chatOpen = false;
+
+    function toggleChat() {
+      chatOpen = !chatOpen;
+      document.getElementById('chatPanel').classList.toggle('hidden', !chatOpen);
+      if (chatOpen) {
+        updateChatContext();
+        document.getElementById('chatInput').focus();
+      }
+    }
+
+    function updateChatContext() {
+      const ctx = document.getElementById('chatContext');
+      const sub = document.getElementById('chatSubtitle');
+      if (!ctx) return;
+      if (currentView === 'case' && currentCase !== null) {
+        const c = children[currentChild];
+        const cs = c.cases[currentCase];
+        ctx.textContent = `Context: Child ${c.initials}, Case ${cs.num} — ${cs.label}`;
+        if (sub) sub.textContent = `Asking about Case ${cs.num}`;
+      } else if (currentView === 'profile') {
+        const c = children[currentChild];
+        ctx.textContent = `Context: Child ${c.initials}'s profile`;
+        if (sub) sub.textContent = `Asking about Child ${c.initials}`;
+      } else {
+        ctx.textContent = 'No case selected — answers will be general';
+        if (sub) sub.textContent = 'Ask anything about this case';
+      }
+    }
+
+    function buildChatSystemPrompt() {
+      let context = 'You are CASAgent, a warm and knowledgeable AI assistant for CASA (Court Appointed Special Advocate) volunteers. You help volunteers with questions about their cases, child development, court procedures, local resources, and anything else relevant to their advocacy work. Be concise, clear, and supportive. If you mention an organization name from the local area (like James City County Child Protective Services, Colonial Behavioral Health, Avalon Center, etc.), volunteers can click on it for contact info.';
+      if (currentView === 'case' && currentCase !== null) {
+        const c = children[currentChild];
+        const cs = c.cases[currentCase];
+        context += `\n\nCurrent case context:\n- Child initials: ${c.initials}\n- Age: ${c.age}\n- Placement: ${c.placement}\n- Volunteer: ${c.volunteer}\n- Case number: ${cs.num}\n- Case label: ${cs.label}\n- Case dates: ${cs.date}`;
+        if (c.flags.length > 0) context += `\n- Key flags: ${c.flags.join('; ')}`;
+      } else if (currentView === 'profile') {
+        const c = children[currentChild];
+        context += `\n\nCurrent profile context:\n- Child initials: ${c.initials}\n- Age: ${c.age}\n- Placement: ${c.placement}\n- Volunteer: ${c.volunteer}`;
+      }
+      return context;
+    }
+
+    function chatKeydown(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+    }
+
+    function autoResize(el) {
+      el.style.height = 'auto';
+      el.style.height = Math.min(el.scrollHeight, 80) + 'px';
+    }
+
+    async function sendChat() {
+      const key = document.getElementById('apiKeyInput').value.trim();
+      const input = document.getElementById('chatInput');
+      const msg = input.value.trim();
+      if (!msg) return;
+      if (!key) { alert('Please enter your Anthropic API key at the top of the page.'); return; }
+
+      input.value = '';
+      input.style.height = 'auto';
+
+      appendChatMsg(msg, 'user');
+      chatHistory.push({ role: 'user', content: msg });
+
+      const thinkingEl = appendChatMsg('Thinking...', 'agent thinking');
+      document.getElementById('chatSendBtn').disabled = true;
+
+      try {
+        const res = await fetch('https://api.anthropic.com/v1/messages', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+          body: JSON.stringify({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 600,
+            system: buildChatSystemPrompt(),
+            messages: chatHistory
+          })
+        });
+        const data = await res.json();
+        if (data.error) throw new Error(data.error.message);
+        const reply = data.content?.[0]?.text || 'No response received.';
+        chatHistory.push({ role: 'assistant', content: reply });
+        thinkingEl.remove();
+        appendChatMsg(reply, 'agent', true);
+      } catch(e) {
+        thinkingEl.remove();
+        appendChatMsg('Sorry, I couldn\'t connect. Check your API key and try again.', 'agent');
+      }
+      document.getElementById('chatSendBtn').disabled = false;
+      document.getElementById('apiStatus').textContent = 'Connected';
+    }
+
+    function appendChatMsg(text, classes, linkify = false) {
+      const msgs = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = `ca-chat-msg ${classes}`;
+      div.innerHTML = linkify ? linkifyOrgs(text.replace(/\n/g, '<br>')) : text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+      return div;
+    }
+
+    /* ── Person SVG ── */
+    function personSVG(large) {
+      const s = large ? 52 : 34;
+      return `<svg width="${s}" height="${s}" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="26" cy="18" r="9" fill="#2B6CB0" opacity="0.55"/><ellipse cx="26" cy="40" rx="14" ry="9" fill="#2B6CB0" opacity="0.4"/></svg>`;
+    }
     function avatarHTML(large) {
       return `<div class="${large ? 'ca-avatar-circle' : 'ca-avatar-sm'}">${personSVG(large)}</div>`;
     }
 
+    /* ── Data ── */
     const children = [
       {
-        initials: 'A.M.', age: 9, volunteer: 'V. Santos', placement: 'Foster home — stable',
-        flags: [
-          'History of disrupted placements (3 prior)',
-          'IEP in place — check compliance with school',
-          'Supervised visits with biological mother ongoing'
-        ],
+        initials: 'A.M.', age: 9, volunteer: 'V. Santos', placement: 'Foster home — stable', languages: 'English, Spanish',
+        flags: ['History of disrupted placements (3 prior)', 'IEP in place — check compliance with school', 'Supervised visits with biological mother ongoing'],
         history: [
           { date: 'Jan 2022', text: 'First entered system due to neglect. Placed with maternal aunt.' },
           { date: 'Jun 2022', text: 'Placement with aunt disrupted. Moved to licensed foster home.' },
@@ -430,95 +467,60 @@
           { date: 'Nov 2023', text: 'Returned to foster care following safety concern. Current placement began.' }
         ],
         cases: [
-          { num: '2022-JV-0441', label: 'Initial neglect case', status: 'Closed', date: 'Jan 2022–Oct 2023' },
-          { num: '2024-CV-1042', label: 'Current reunification review', status: 'Active', date: 'Nov 2023–present' }
+          { num: '2022-JV-0441', label: 'Initial neglect case', status: 'Closed', date: 'Jan 2022–Oct 2023', transcripts: [] },
+          { num: '2024-CV-1042', label: 'Current reunification review', status: 'Active', date: 'Nov 2023–present', transcripts: [
+            { id: 1, title: 'CPS Interview — initial assessment', date: 'Nov 14, 2023', volunteer: 'V. Santos', text: 'Child was interviewed by CPS worker Maria Torres. Child stated she felt unsafe at home. Mentioned not having consistent meals and feeling scared at night. Child appeared withdrawn but cooperative. No visible signs of physical abuse noted. Referred for psychological evaluation.' }
+          ]}
         ]
       },
       {
-        initials: 'T.R.', age: 14, volunteer: 'J. Kim', placement: 'Group home — monitoring closely',
-        flags: [
-          'School attendance concerns — 12 absences this semester',
-          'Mental health evaluation overdue by 4 months',
-          'No current therapist assigned'
-        ],
+        initials: 'T.R.', age: 14, volunteer: 'J. Kim', placement: 'Group home — monitoring closely', languages: 'English',
+        flags: ['School attendance concerns — 12 absences this semester', 'Mental health evaluation overdue by 4 months', 'No current therapist assigned'],
         history: [
           { date: 'Mar 2021', text: 'Entered system following domestic violence in home.' },
           { date: 'Sep 2021', text: 'Placed with paternal grandparents. Stable for 18 months.' },
           { date: 'Mar 2023', text: 'Grandparents unable to continue. Transitioned to group home.' }
         ],
         cases: [
-          { num: '2021-JV-0203', label: 'DV removal case', status: 'Closed', date: 'Mar 2021–Aug 2022' },
-          { num: '2024-JV-0887', label: 'Placement stability review', status: 'Active', date: 'Mar 2023–present' }
+          { num: '2021-JV-0203', label: 'DV removal case', status: 'Closed', date: 'Mar 2021–Aug 2022', transcripts: [] },
+          { num: '2024-JV-0887', label: 'Placement stability review', status: 'Active', date: 'Mar 2023–present', transcripts: [] }
         ]
       }
     ];
 
     let currentChild = 0, currentView = 'profile', currentProfileTab = 0, currentCase = null, currentModuleTab = 0;
 
-    const profileTabs = ['Overview', 'History', 'Cases'];
+    const profileTabs = ['Overview', 'History', 'Cases', 'Transcripts'];
     const moduleTabs = ['Court prep', 'Milestone tracker', 'Report drafter', 'Gap analyzer'];
-
     const moduleDescs = [
       'Paste case notes or a prior court report below. CASAgent will summarize key facts, surface relevant legal considerations, flag upcoming hearing dates, and highlight anything requiring urgent attention — so you walk into court fully prepared.',
       'Describe your recent observations about the child\'s development, behavior, school performance, or well-being. CASAgent will identify potential concerns and suggest specific questions to raise with teachers, therapists, or caseworkers.',
-      'Share your observations and notes. CASAgent will help draft a court report that preserves your voice and perspective. You always review and revise before any submission — this is a starting point, not a final product.',
-      'Describe the services, placements, and documentation currently in place for this child. CASAgent will identify gaps that could strengthen the case or better support the child\'s well-being and safety.'
+      'Share your observations and notes. CASAgent will help draft a court report that preserves your voice and perspective. You always review and revise before any submission.',
+      'Describe the services, placements, and documentation currently in place for this child. CASAgent will identify gaps that could strengthen the case or better support the child\'s well-being.'
     ];
-
     const modulePrompts = [
-      `You are CASAgent, an AI assistant built exclusively for CASA (Court Appointed Special Advocate) volunteers. Your role is to help volunteers prepare for court hearings.
-
-Given the case notes provided, please:
-1. Summarize the key facts and timeline of this case
-2. Identify upcoming court dates, deadlines, or time-sensitive items
-3. Describe the child's current placement and stability
-4. Flag any urgent concerns requiring immediate attention
-5. Surface relevant legal considerations a CASA volunteer should be aware of for this hearing
-
-Be organized, clear, and concise. Use plain language — these are dedicated volunteers, not attorneys. Always end with a brief reminder that your output is meant to supplement the advocate's own observations and judgment, never replace them.`,
-
-      `You are CASAgent, an AI assistant built for CASA volunteers. Your role is to help track a child's developmental well-being.
-
-Given the advocate's observations, please:
-1. Identify developmental milestones or areas that appear on track
-2. Flag potential concerns across emotional, educational, physical, and social domains
-3. Suggest specific questions the advocate should raise with teachers, therapists, foster parents, or caseworkers
-4. Note anything that warrants follow-up or professional evaluation
-
-Use warm, accessible language — not clinical or diagnostic. These are observations to guide further inquiry, not conclusions. Remind the advocate that flags are prompts for investigation, not diagnoses.`,
-
-      `You are CASAgent, an AI assistant built for CASA volunteers. Your role is to help draft court reports.
-
-Based on the advocate's notes provided, draft a structured court report with the following sections:
-1. Current Placement and Stability
-2. Child's Well-Being and Development
-3. Services Currently in Place and Their Effectiveness
-4. Advocate's Observations and Concerns
-5. Recommendations
-
-Write in first person, as if the advocate is writing. Preserve their voice — use natural, direct language rather than overly formal legal language. This is the advocate speaking about a child they know.
-
-Include a clear note at the top that this is a DRAFT for the advocate's review and revision before any submission. Accuracy of facts is the advocate's responsibility.`,
-
-      `You are CASAgent, an AI assistant built for CASA volunteers. Your role is to identify gaps in services and documentation.
-
-Given the current services and documentation described, please:
-1. Identify missing evaluations or assessments typically required in child welfare cases
-2. Note services that appear absent given the child's age, situation, or known needs
-3. Highlight documentation gaps that could weaken the case or leave the child underserved
-4. Provide specific, actionable recommendations for the advocate's next steps
-
-Frame gaps as opportunities to strengthen the child's support and case — not as failures of the system or individuals. Be specific and practical. Prioritize the most impactful gaps first.`
+      `You are CASAgent, an AI assistant for CASA volunteers. Given the case notes, help prepare for court: (1) summarize key facts and timeline, (2) identify upcoming dates, (3) note placement and stability, (4) flag urgent concerns, (5) surface relevant legal considerations. Be organized and concise. If you mention any local organizations like James City County Child Protective Services, Colonial Behavioral Health, or Avalon Center, volunteers can click them for contact info. Remind the volunteer your output supplements their judgment.`,
+      `You are CASAgent, an AI assistant for CASA volunteers. Given observations about a child, identify: (1) milestones on track, (2) concerns to flag across emotional, educational, physical, and social domains, (3) questions to raise with service providers. Be warm, not clinical. If relevant, mention local resources like Colonial Behavioral Health or Williamsburg-James City County Schools. Note these are prompts for investigation, not diagnoses.`,
+      `You are CASAgent, an AI assistant for CASA volunteers. Draft a court report from the volunteer's notes. Structure: (1) Current placement, (2) Well-being and development, (3) Services in place, (4) Advocate observations, (5) Recommendations. Write in first person, preserving the advocate's voice. Note this is a draft for review before submission.`,
+      `You are CASAgent, an AI assistant for CASA volunteers. Given services and documentation described, identify: (1) Missing evaluations, (2) Absent services, (3) Documentation gaps, (4) Recommended next steps. If relevant, mention local resources like James City County Child Protective Services, Colonial Behavioral Health, or Peninsula Agency on Aging. Frame gaps as opportunities to strengthen the child's support.`
     ];
-
     const modulePlaceholders = [
-      'Paste case notes, prior court reports, service plans, or any relevant documentation here...',
-      'Describe your recent observations about the child\'s development, behavior, schooling, health, relationships, or emotional well-being...',
-      'Write your observations, the child\'s current situation, your recommendations, and any concerns you want included in the report...',
-      'List the services, placements, evaluations, therapy, school supports, and documentation currently in place for this child...'
+      'Paste case notes, prior court reports, or any relevant documentation here...',
+      'Describe your recent observations about the child\'s development, behavior, schooling, health, or emotional well-being...',
+      'Write your observations, the child\'s current situation, your recommendations, and any concerns you want included...',
+      'List the services, placements, evaluations, and documentation currently in place for this child...'
     ];
-
     const moduleBtns = ['Prepare court summary ↗', 'Analyze observations ↗', 'Draft report ↗', 'Identify gaps ↗'];
+
+    /* ── Sidebar ── */
+    function filterChildren() {
+      const q = document.getElementById('childSearch').value.toLowerCase();
+      document.querySelectorAll('.ca-child-card').forEach((card, i) => {
+        const c = children[i];
+        const match = c.initials.toLowerCase().includes(q) || c.cases.some(cs => cs.num.toLowerCase().includes(q));
+        card.style.display = match ? '' : 'none';
+      });
+    }
 
     function renderSidebar() {
       document.getElementById('childList').innerHTML = children.map((c, i) => `
@@ -536,7 +538,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
 
     function selectChild(i) {
       currentChild = i; currentView = 'profile'; currentProfileTab = 0; currentCase = null;
-      renderSidebar(); renderMain();
+      renderSidebar(); renderMain(); updateChatContext();
     }
 
     function renderMain() {
@@ -544,6 +546,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
       else renderCase();
     }
 
+    /* ── Profile ── */
     function renderProfile() {
       const c = children[currentChild];
       document.getElementById('mainView').innerHTML = `
@@ -552,7 +555,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
             ${avatarHTML(true)}
             <div>
               <div class="ca-profile-name">Child ${c.initials}</div>
-              <div class="ca-profile-sub">Age ${c.age} &nbsp;·&nbsp; ${c.placement} &nbsp;·&nbsp; Volunteer: ${c.volunteer}</div>
+              <div class="ca-profile-sub">Age ${c.age} &nbsp;·&nbsp; ${c.placement} &nbsp;·&nbsp; Volunteer: ${c.volunteer} &nbsp;·&nbsp; Languages: ${c.languages || 'Not specified'}</div>
             </div>
           </div>
           <div class="ca-tabs">
@@ -578,6 +581,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
             <div class="ca-info-card"><div class="ca-info-card-label">Age</div><div class="ca-info-card-val">${c.age} years old</div></div>
             <div class="ca-info-card"><div class="ca-info-card-label">Current placement</div><div class="ca-info-card-val">${c.placement}</div></div>
             <div class="ca-info-card"><div class="ca-info-card-label">Assigned volunteer</div><div class="ca-info-card-val">${c.volunteer}</div></div>
+            <div class="ca-info-card"><div class="ca-info-card-label">Languages spoken</div><div class="ca-info-card-val">${c.languages || 'Not specified'}</div></div>
             <div class="ca-info-card"><div class="ca-info-card-label">Total cases</div><div class="ca-info-card-val">${c.cases.length} case${c.cases.length !== 1 ? 's' : ''} (${c.cases.filter(x => x.status === 'Active').length} active)</div></div>
           </div>
           <div class="ca-section-head">Key considerations for this child</div>
@@ -588,7 +592,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
           <div class="ca-section-head">Case history</div>
           ${c.history.map(h => `<div class="ca-history-entry"><div class="ca-history-date">${h.date}</div><div class="ca-history-text">${h.text}</div></div>`).join('')}
           ${c.history.length === 0 ? '<p class="ca-empty">No history entries yet.</p>' : ''}`;
-      } else {
+      } else if (currentProfileTab === 2) {
         panel.innerHTML = `
           <div class="ca-section-head" style="margin-bottom:10px;">All cases</div>
           ${c.cases.map((cs, i) => `
@@ -602,13 +606,32 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
               <div class="ca-case-open-btn">Open →</div>
             </div>`).join('')}
           <button class="ca-add-btn" style="margin:8px 0 0;" onclick="addCase()">+ Add new case</button>`;
+      } else {
+        const allTranscripts = c.cases.flatMap((cs, ci) => (cs.transcripts || []).map(t => ({ ...t, caseNum: cs.num, caseIdx: ci })));
+        panel.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <div class="ca-section-head" style="margin:0;">Interview transcripts</div>
+            <button class="ca-run-btn" style="padding:6px 14px;font-size:12px;" onclick="showTranscriptModal()">+ Add transcript</button>
+          </div>
+          <p style="font-size:12px;color:var(--text-tertiary);margin-bottom:14px;line-height:1.5;">Transcripts are session-only and never stored beyond this browser session. Only add transcripts your organization has authorized for digital use.</p>
+          ${allTranscripts.length === 0 ? '<p class="ca-empty">No transcripts added yet.</p>' : allTranscripts.map(t => `
+            <div class="ca-transcript-entry">
+              <div class="ca-transcript-meta">
+                <div class="ca-transcript-title">${t.title}</div>
+                <div class="ca-transcript-date">${t.date}</div>
+              </div>
+              <div class="ca-transcript-vol">Logged by: ${t.volunteer} &nbsp;·&nbsp; Case: ${t.caseNum}</div>
+              <div class="ca-transcript-text">${t.text}</div>
+            </div>`).join('')}`;
       }
     }
 
     function openCase(i) {
-      currentCase = i; currentView = 'case'; currentModuleTab = 0; renderMain();
+      currentCase = i; currentView = 'case'; currentModuleTab = 0;
+      renderMain(); updateChatContext();
     }
 
+    /* ── Case workspace ── */
     function renderCase() {
       const c = children[currentChild];
       const cs = c.cases[currentCase];
@@ -625,7 +648,7 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
       renderModulePanel();
     }
 
-    function backToProfile() { currentView = 'profile'; currentCase = null; renderMain(); }
+    function backToProfile() { currentView = 'profile'; currentCase = null; renderMain(); updateChatContext(); }
 
     function switchModuleTab(i) {
       currentModuleTab = i;
@@ -659,52 +682,76 @@ Frame gaps as opportunities to strengthen the child's support and case — not a
       try {
         const res = await fetch('https://api.anthropic.com/v1/messages', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-api-key': key,
-            'anthropic-version': '2023-06-01',
-            'anthropic-dangerous-direct-browser-access': 'true'
-          },
+          headers: { 'Content-Type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
             max_tokens: 1200,
             system: modulePrompts[currentModuleTab],
-            messages: [{
-              role: 'user',
-              content: `Case number: ${cs.num}
-Case label: ${cs.label}
-Case dates: ${cs.date}
-Child initials: ${c.initials}
-Child age: ${c.age}
-Current placement: ${c.placement}
-Assigned volunteer: ${c.volunteer}
-
-Advocate notes:
-${notes}`
-            }]
+            messages: [{ role: 'user', content: `Case number: ${cs.num}\nCase label: ${cs.label}\nCase dates: ${cs.date}\nChild initials: ${c.initials}\nChild age: ${c.age}\nCurrent placement: ${c.placement}\nAssigned volunteer: ${c.volunteer}\n\nAdvocate notes:\n${notes}` }]
           })
         });
         const data = await res.json();
         if (data.error) throw new Error(data.error.message);
         const text = data.content?.[0]?.text || 'No response received.';
-        document.getElementById('outputArea').innerHTML = `<div class="ca-output"><span class="ca-output-label">CASAgent — ${moduleTabs[currentModuleTab]}</span>${text}</div>`;
+        document.getElementById('outputArea').innerHTML = `<div class="ca-output"><span class="ca-output-label">CASAgent — ${moduleTabs[currentModuleTab]}</span>${linkifyOrgs(text.replace(/\n/g, '<br>'))}</div>`;
       } catch (e) {
-        document.getElementById('outputArea').innerHTML = `<div class="ca-output"><span class="ca-output-label">Error</span>Could not connect to the AI. Please check your API key and try again.<br><br><small style="color:var(--text-tertiary);">${e.message || ''}</small></div>`;
+        document.getElementById('outputArea').innerHTML = `<div class="ca-output"><span class="ca-output-label">Error</span>Could not connect. Check your API key and try again.<br><br><small>${e.message || ''}</small></div>`;
       }
       btn.disabled = false; btn.textContent = moduleBtns[currentModuleTab];
     }
 
+    /* ── Transcript modal ── */
+    function showTranscriptModal() {
+      const c = children[currentChild];
+      const m = document.createElement('div');
+      m.className = 'ca-modal-bg'; m.id = 'caModal';
+      m.innerHTML = `
+        <div class="ca-modal">
+          <div class="ca-modal-title">Add interview transcript</div>
+          <div class="ca-modal-sub">Session-only. Never stored beyond this browser session. Only add transcripts your organization has authorized for digital use.</div>
+          <div class="ca-modal-row"><label>Title *</label><input id="tTitle" placeholder="e.g. CPS interview — initial assessment" /></div>
+          <div class="ca-modal-row"><label>Date *</label><input id="tDate" placeholder="e.g. Nov 14, 2023" /></div>
+          <div class="ca-modal-row"><label>Logged by (volunteer name)</label><input id="tVol" placeholder="e.g. Your name" /></div>
+          <div class="ca-modal-row">
+            <label>Associate with case</label>
+            <select id="tCase">${c.cases.map((cs, i) => `<option value="${i}">${cs.num} — ${cs.label}</option>`).join('')}</select>
+          </div>
+          <div class="ca-modal-row"><label>Transcript text *</label><textarea id="tText" placeholder="Paste or type the transcript or interview notes here..."></textarea></div>
+          <div class="ca-modal-btns">
+            <button class="ca-modal-cancel" onclick="closeModal()">Cancel</button>
+            <button class="ca-modal-create" onclick="saveTranscript()">Save transcript</button>
+          </div>
+        </div>`;
+      document.body.appendChild(m);
+    }
+
+    function saveTranscript() {
+      const title = document.getElementById('tTitle').value.trim();
+      const date = document.getElementById('tDate').value.trim();
+      const vol = document.getElementById('tVol').value.trim() || 'Unassigned';
+      const caseIdx = parseInt(document.getElementById('tCase').value);
+      const text = document.getElementById('tText').value.trim();
+      if (!title || !date || !text) { alert('Title, date, and transcript text are required.'); return; }
+      const c = children[currentChild];
+      if (!c.cases[caseIdx].transcripts) c.cases[caseIdx].transcripts = [];
+      c.cases[caseIdx].transcripts.push({ id: Date.now(), title, date, volunteer: vol, text });
+      closeModal();
+      renderProfileTab();
+    }
+
+    /* ── Add child / case modals ── */
     function showModal() {
       const m = document.createElement('div');
       m.className = 'ca-modal-bg'; m.id = 'caModal';
       m.innerHTML = `
         <div class="ca-modal">
           <div class="ca-modal-title">Add child profile</div>
-          <div class="ca-modal-sub">All information is session-only and never stored, transmitted, or saved beyond this browser session.</div>
+          <div class="ca-modal-sub">All information is session-only and never stored beyond this browser session.</div>
           <div class="ca-modal-row"><label>Child initials *</label><input id="nI" placeholder="e.g. J.D." /></div>
           <div class="ca-modal-row"><label>Age *</label><input id="nA" placeholder="e.g. 10" type="number" min="0" max="25" /></div>
           <div class="ca-modal-row"><label>Current placement</label><input id="nP" placeholder="e.g. Foster home, group home..." /></div>
           <div class="ca-modal-row"><label>Assigned volunteer name</label><input id="nV" placeholder="e.g. Your name" /></div>
+          <div class="ca-modal-row"><label>Languages spoken</label><input id="nL" placeholder="e.g. English, Spanish" /></div>
           <div class="ca-modal-btns">
             <button class="ca-modal-cancel" onclick="closeModal()">Cancel</button>
             <button class="ca-modal-create" onclick="createChild()">Create profile</button>
@@ -721,8 +768,9 @@ ${notes}`
       const age = parseInt(document.getElementById('nA').value) || 0;
       const placement = document.getElementById('nP').value.trim() || 'Not specified';
       const volunteer = document.getElementById('nV').value.trim() || 'Unassigned';
+      const languages = document.getElementById('nL').value.trim() || 'Not specified';
       if (!initials || !age) { alert('Child initials and age are required.'); return; }
-      children.push({ initials, age, volunteer, placement, flags: [], history: [], cases: [] });
+      children.push({ initials, age, volunteer, placement, languages, flags: [], history: [], cases: [] });
       closeModal();
       selectChild(children.length - 1);
     }
@@ -732,7 +780,7 @@ ${notes}`
       const num = prompt('Enter case number (e.g. 2024-CV-1099):');
       if (!num || !num.trim()) return;
       const label = prompt('Enter a short case label (e.g. Reunification review):') || 'New case';
-      c.cases.push({ num: num.trim(), label, status: 'Active', date: new Date().getFullYear() + '–present' });
+      c.cases.push({ num: num.trim(), label, status: 'Active', date: new Date().getFullYear() + '–present', transcripts: [] });
       renderProfileTab();
     }
 
