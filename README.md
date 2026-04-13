@@ -119,7 +119,7 @@ The Python implementation (`casagent_assignment5.py`) demonstrates a full multi-
 | Multi-Agent Orchestration | Orchestrator wraps sub-agents as callable tools, synthesizes unified pre-hearing brief |
  
 ---
-## 🚀 What's Next?
+## What's Next?
  
 **Near-term development:**
 - **Email integration** — automatically pull relevant case correspondence into the volunteer's workspace, eliminating inbox digging
