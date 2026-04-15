@@ -1,4 +1,5 @@
 # CASAgent 
+![CASAgent Logo](casagent_logo_github.png)
 ### AI-Powered Support Tool for CASA Volunteers
 
 > *Augmenting the work of Court Appointed Special Advocates through intelligent, session-safe AI assistance.*
