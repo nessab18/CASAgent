@@ -163,9 +163,11 @@ The tool is designed to need as little identifying information as possible. Chil
 ---
 ## 📚 References
  
-**Primary Research Paper:**
+**Primary Research Papers:**
  
 Kawakami, A., Sivaraman, V., Cheng, H., Stapleton, L., Cheng, Y., Qing, D., Perer, A., Wu, Z. S., Zhu, H., & Holstein, K. (2022). *Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support.* Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems. **Best Paper Honorable Mention.** https://arxiv.org/abs/2204.02310
+
+Carroll, J. M. et al. (2025). From Sociotechnical Gaps to Solutions: Designing AI Tools with Parents to Address Special Education Advocacy Barriers in IEP Processes. Proceedings of the 2025 ACM Designing Interactive Systems Conference. https://doi.org/10.1145/3715336.3735778
  
 **Additional Resources:**
  
