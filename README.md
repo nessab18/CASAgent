@@ -8,6 +8,7 @@
 [![Python](https://img.shields.io/badge/Python-LangChain%20%7C%20LangGraph-green)](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
 
 🌐 **Live App:** https://casagent.org
+![Scan to open CASAgent](http_casagent_org.png)
 💻 **Code Demo:** [casagent_assignment5.py](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
 ---
  
