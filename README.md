@@ -3,7 +3,12 @@
 ### AI-Powered Support Tool for CASA Volunteers
 
 > *Augmenting the work of Court Appointed Special Advocates through intelligent, session-safe AI assistance.*
- 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-casagent.org-blue)](https://casagent.org)
+[![Built with Claude](https://img.shields.io/badge/Built%20with-Anthropic%20Claude-orange)](https://www.anthropic.com)
+[![Python](https://img.shields.io/badge/Python-LangChain%20%7C%20LangGraph-green)](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
+
+🌐 **Live App:** https://casagent.org
+💻 **Code Demo:** [casagent_assignment5.py](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
 ---
  
 ## Problem Statement
@@ -73,7 +78,7 @@ CASAgent uses a **multi-agent AI architecture** built on LangChain and LangGraph
 ```
 ### Web Application Features
  
-The hosted web application ([nessab18.github.io/CASAgent](https://nessab18.github.io/CASAgent/)) includes:
+The hosted web application ([casagent.org](https://casagent.org)) includes:
  
 **Child Profile System**
 - Longitudinal child profiles with case history across multiple court matters
@@ -126,7 +131,7 @@ The Python implementation (`casagent_assignment5.py`) demonstrates a full multi-
 - **Email integration** — automatically pull relevant case correspondence into the volunteer's workspace, eliminating inbox digging
 - **Case law citations with source links** — surface clickable legal citations so volunteers can trace every AI-generated legal reference back to the original source
 - **User authentication** — CASA-administered login system so the tool can be deployed internally without API key exposure
-- **Custom domain** — deploy to a dedicated domain with a proper backend server
+- **Backend server** — add server-side API key handling and user authentication for production deployment
  
 **Longer-term vision:**
 - **Multilingual interface** — serve CASA chapters in communities where children and families speak languages other than English
