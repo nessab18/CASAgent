@@ -3,13 +3,15 @@
 ### AI-Powered Support Tool for CASA Volunteers
 
 > *Augmenting the work of Court Appointed Special Advocates through intelligent, session-safe AI assistance.*
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-casagent.org-blue)](https://casagent.org)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Anthropic%20Claude-orange)](https://www.anthropic.com)
 [![Python](https://img.shields.io/badge/Python-LangChain%20%7C%20LangGraph-green)](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
 
-🌐 **Live App:** https://casagent.org
-<img src="http_casagent_org.png" width="150" alt="Scan to open CASAgent at casagent.org">
-💻 **Code Demo:** [casagent_assignment5.py](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
+🌐 **Live App:** https://casagent.org &nbsp;&nbsp;&nbsp; 💻 **Code Demo:** [casagent_assignment5.py](https://github.com/nessab18/CASAgent/blob/main/casagent_assignment5.py)
+
+<img src="http_casagent_org.png" width="120" alt="Scan to open casagent.org">
+
 ---
  
 ## Problem Statement
